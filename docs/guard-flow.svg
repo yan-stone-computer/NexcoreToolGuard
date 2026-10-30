@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Nexcore Tool Guard flow</title>
+  <desc id="desc">A tool call is registered, risk is evaluated, exact arguments are digested, approval is refreshed when payload changes, and the result or denial is traced.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#0b8797"/></marker>
+  </defs>
+  <rect width="960" height="540" rx="28" fill="#f7fbfc"/>
+  <g font-family="Microsoft YaHei, PingFang SC, sans-serif">
+    <text x="48" y="62" font-size="28" font-weight="700" fill="#18323b">Nexcore Tool Guard</text>
+    <text x="48" y="90" font-size="15" fill="#58737d">Approval belongs to the exact call, not the tool name.</text>
+    <g>
+      <rect x="45" y="170" width="155" height="136" rx="18" fill="#fff" stroke="#bcdce4"/>
+      <text x="122" y="215" text-anchor="middle" font-size="18" font-weight="700" fill="#18323b">Tool request</text>
+      <text x="122" y="247" text-anchor="middle" font-size="13" fill="#58737d">name + arguments</text>
+      <text x="122" y="272" text-anchor="middle" font-size="13" fill="#58737d">call id</text>
+
+      <rect x="240" y="170" width="170" height="136" rx="18" fill="#e8faf5" stroke="#54d0b1" stroke-width="2"/>
+      <text x="325" y="211" text-anchor="middle" font-size="18" font-weight="700" fill="#18323b">Policy</text>
+      <text x="325" y="243" text-anchor="middle" font-size="13" fill="#58737d">scope / risk</text>
+      <text x="325" y="268" text-anchor="middle" font-size="13" fill="#58737d">budget / circuit</text>
+
+      <rect x="455" y="150" width="190" height="176" rx="20" fill="#10272f"/>
+      <text x="550" y="194" text-anchor="middle" font-size="13" font-weight="700" fill="#6fe5be" letter-spacing="1">CONTENT BOUND</text>
+      <text x="550" y="229" text-anchor="middle" font-size="20" font-weight="700" fill="#f4fbfc">Approval digest</text>
+      <text x="550" y="260" text-anchor="middle" font-size="13" fill="#bad3d9">sha256(tool + args)</text>
+      <text x="550" y="289" text-anchor="middle" font-size="13" fill="#bad3d9">tool name change → deny</text>
+      <text x="550" y="309" text-anchor="middle" font-size="13" fill="#bad3d9">argument change → deny</text>
+
+      <rect x="695" y="170" width="105" height="136" rx="18" fill="#fff" stroke="#bcdce4"/>
+      <text x="747" y="215" text-anchor="middle" font-size="16" font-weight="700" fill="#18323b">Execute</text>
+      <text x="747" y="246" text-anchor="middle" font-size="13" fill="#58737d">or stop</text>
+
+      <rect x="835" y="170" width="80" height="136" rx="18" fill="#e8faf5" stroke="#54d0b1" stroke-width="2"/>
+      <text x="875" y="215" text-anchor="middle" font-size="16" font-weight="700" fill="#18323b">Trace</text>
+      <text x="875" y="246" text-anchor="middle" font-size="13" fill="#58737d">回执</text>
+      <text x="875" y="270" text-anchor="middle" font-size="13" fill="#58737d">原因</text>
+    </g>
+    <g fill="none" stroke="#0b8797" stroke-width="2.3" marker-end="url(#arrow)">
+      <path d="M200 238h35"/>
+      <path d="M410 238h40"/>
+      <path d="M645 238h45"/>
+      <path d="M800 238h30"/>
+    </g>
+    <text x="480" y="414" text-anchor="middle" font-size="15" fill="#466873">A changed payload invalidates the previous approval.</text>
+    <text x="480" y="443" text-anchor="middle" font-size="14" fill="#58737d">Unknown tools, expired grants, exhausted budgets and open circuits fail closed.</text>
+  </g>
+</svg>
