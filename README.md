@@ -8,7 +8,7 @@
 [![Node.js](https://img.shields.io/badge/Node.js-22%2B-339933.svg)](https://nodejs.org/)
 [![Dependencies](https://img.shields.io/badge/runtime_dependencies-0-2563eb.svg)](package.json)
 
-![Tool call guard flow](docs/guard-flow.svg)
+![Tool call guard flow](docs/guard-flow.png)
 
 NexcoreToolGuard 是 AI 工具调用的策略层。它不执行工具，也不假装是系统沙箱。它负责在执行前
 回答四个问题：
