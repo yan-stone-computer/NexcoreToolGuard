@@ -8,7 +8,13 @@
 [![Node.js](https://img.shields.io/badge/Node.js-22%2B-339933.svg)](https://nodejs.org/)
 [![Dependencies](https://img.shields.io/badge/runtime_dependencies-0-2563eb.svg)](package.json)
 
-![Tool call guard flow](https://raw.githubusercontent.com/yan-stone-computer/NexcoreToolGuard/main/docs/guard-flow.png)
+![Tool call guard flow](https://cdn.jsdelivr.net/gh/yan-stone-computer/NexcoreToolGuard@main/docs/guard-flow.png)
+
+### From the running product
+
+![NexcoreWork capability registry](https://cdn.jsdelivr.net/gh/yan-stone-computer/NexcoreToolGuard@main/docs/product-capabilities.webp)
+
+真实能力目录里，每个工具的来源、作用域、风险与健康度都在同一张表，执行前会经过 guard 决策。
 
 NexcoreToolGuard 是 AI 工具调用的策略层。它不执行工具，也不假装是系统沙箱。它负责在执行前
 回答四个问题：
